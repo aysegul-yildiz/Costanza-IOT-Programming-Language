@@ -1,0 +1,66 @@
+
+run{
+	<*Environment quality check device*>
+	
+	aQ <- <<determineAirQuality()
+	hMD<- <<determineHumidity()
+	sL<- <<determineSoundLevel()
+	
+	sendInt (aQ to "https://www.google.com/?client=safari"  )
+	sendInt (hMD to "https://www.google.com/?client=safari"  )
+	sendInt (sL to "https://www.google.com/?client=safari"  )
+}
+
+%%
+
+function>>determineAirQualityLevel(airQ){
+	if( 0> airQ && 33<=airQ){
+		airQualityLevel <- 0
+	}
+	if(34< airQ && 66>=airQ){
+		airQualityLevel <- 1
+	}
+	if(67<airQ && 99>=airQ){
+		airQualityLevel <- 2
+	}
+	if(100<airQ && 149>=airQ){
+		airQualityLevel <- 3
+	}
+	if(150<airQ && 200>=airQ){
+		airQualityLevel <- 4
+	}
+	if(200<airQ ){
+		airQualityLevel <- 5
+	}
+	return airQualityLevel
+
+}
+
+function>> determineHumidityLevel(humidity){
+	<*humidty is a percentage*>
+	if(30>humidity){
+		humidityLevel <- 0
+	}
+	if(30<=humidity && 60>=humidty){
+		humidityLevel <- 1 
+	}
+	if(60<humidity){
+		humidityLevel <- 2
+	}
+	return humidityLevel
+}
+
+function>> determineSoundLevel(db){
+	if(db <= 70){
+		soundLevel <- 0
+	}
+	if(db >70 && db <120){
+		soundLevel <- 1
+	}
+	if(db>=120){
+		soundLevel <- 2
+	}
+
+	return soundLevel
+}
+

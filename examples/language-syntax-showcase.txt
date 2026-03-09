@@ -1,0 +1,67 @@
+
+run{
+
+	<*this is a comment*> 
+	print("Hello World!")
+	b <- 50 
+	c <- 100 
+	x <- 10 
+	y <- 20 
+	a <- 3  
+	intA 
+	intB 
+	stringA 
+	stringB  
+
+	<*basic assignments*>
+	arr1 <- {}
+	arr2 <- {x,y,z}
+	arr3 <- {x,y,z,t}
+	arr4 <- {a,b,c,d,e} 
+
+	string1 <- "string test " 
+	string2 <- "another string test" 
+
+	string3 = "test3" <* this assignment operator will give an syntax error *>
+ 
+	int1 <- 1 + 1 
+	int2 <- 2 + 2 
+	int3 <- 3 * 3 
+	int4 <- 4 / 2
+ 
+	int1 <- 5 + 8.5 * 5  3.8 + int2	
+
+	if( a not= 7) { a <- true }  
+	if (a > 1 && a < 9 || a < 7 ) {   a <- false } 
+
+	if (x < 15) {   if(a > 10)   {   a <- 5   }   else   {   a <- 7   } } else {  a <- 7 }   
+
+	while (a < 10)  {  a <- a + 2   } 
+
+ 	for (i<-5 , i<100 , i++ ) {   print("for") }   
+
+	f <- <<getTemperature()
+	f<- <<getHumidity()
+	f<- <<getAirPressure()
+	f<- <<getAirQuality()
+	f<- <<getLight()
+	f<- <<getSound()
+	f<- <<getTime()
+
+	<<switchOn(s1)
+	<<switchOff(s2)
+
+}
+
+%%
+
+function>> foo1() {   print("here") } 
+
+function>> foo2(a,b,c) {   
+	print(a)  
+ 	print(b)   
+	print(c) 
+	x <- a + b + c   
+	return x
+}
+

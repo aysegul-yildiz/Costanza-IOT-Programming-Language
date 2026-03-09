@@ -1,0 +1,21 @@
+
+run{
+ 	<*tests empty statement list, non empty function declarations*>
+}
+
+%%
+
+function>> celciusToFahrenheit(celcius){
+	fahrenheit <- celcius * 1.8 + 32
+	return fahrenheit
+}
+
+function foo(){
+	<*this function declaration will give an syntax error*>
+}
+
+function>> fahrenheitToCelcius(fahrenheit){
+	celcius <- fahrenheit -32
+	celcius <- celcius * 5 / 9
+	return celcius
+}

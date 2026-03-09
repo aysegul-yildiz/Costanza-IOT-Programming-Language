@@ -1,0 +1,41 @@
+
+run{
+
+	work_start <- 9
+	work_end <- 17
+	light <- s1
+	heater <- s2
+	continue <- true
+	while(continue){
+
+		<*  time array is [year, month, day, hour, minute, second]  *>
+
+		time <- <<getTime()
+		if( time[3] >= 9 && time[3] <= 17){
+			<<switchOn(s1)
+		}
+		else{
+			<<switchOff(s1)
+		}
+
+		temp <- <<getTemperature()
+
+		if(temp < 18 ){
+			<<switchOn(s2)
+		}
+
+		if(temp > 30 ){
+			<<switchOff(s2)
+		}
+
+		soundLevel <- <<getSound()
+
+		if(soundLevel > 15){
+			alarm <- 01100101 01111000 01100011 01010011 01101110 01100100 
+			<<sendInt (alarm to "https://www.google.com/?client=safari" )
+		}
+
+	}
+}
+
+%%
