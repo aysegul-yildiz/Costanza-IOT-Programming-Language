@@ -1,7 +1,7 @@
 # Costanza-IOT-Programming-Language
 Costanza is a programming language specifically designed for IoT (Internet of things) development. Developed as a team project for the CS 315, programming languages, course at Bilkent in 2024.
 
-The Team
+# The Team
 -- Ayşegül Yıldız
 -- Duru Solakoğlu
 -- Erkan Can Arslan
@@ -13,7 +13,7 @@ Once a pattern is matched, Lex passes a token code to the Yacc parser. For examp
 The Yacc Parser (CS315_S24_Team1.yacc) is the brain of the compiler. it takes the tokens provided by lex and checks if they follow the grammar rules (BNF) of costanza.
 It ensures that a run block is opened with a {, contains valid statements and is followed by the %% separator if functions are declared.It handles operator precedence ensuring multiplication happens before addition and manages nested structures like if-else blocks and while loops. It defines the program's skeleton, ensuring that every user defined function has a valid parameter list and a properly enclosed body.
 
-#How to run?
+# How to run?
 To build the Costanza parser, you need flex, bison (or yacc) and gcc installed. Run the following commands (or use the provided Makefile by typing make):
     - lex CS315_S24_Team1.lex
     - yacc CS315_S24_Team1.yacc
