@@ -1,13 +1,12 @@
-# Compiler and Flags
 CC = gcc
 LEX = lex
 YACC = yacc
 
-# Directory Paths
+#paths
 SRC_DIR = src
 EXAMPLES_DIR = examples
 
-# The final executable name
+#executable name
 TARGET = parser
 all: $(TARGET)
 
