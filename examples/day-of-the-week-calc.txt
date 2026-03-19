@@ -1,10 +1,12 @@
-
 run{
-	dateArr <- <<getTime()
-	dayofWeekLocal <-  <<findDayofWeek(dateArr[0], dateArr[1], dateArr[2])
-	sendInt( dayofWeekLocal to "https://example.com/" )
-	receiveInt(timeTest from "https://www.google.com/?client=safari" )
-
+<* Note: This test intentionally displays the language's error-catching 
+       capabilities. The parser will report a syntax error but 
+       due to the error recovery rule in the grammar, it will continue 
+       to validate the rest of the program. *>
+    dateArr <- <<getTime()
+    dayofWeekLocal <- <<findDayofWeek(dateArr[0], dateArr[1], dateArr[2])
+    <<sendInt(dayofWeekLocal to "https://example.com/")
+    <<receiveInt(timeTest from "https://www.google.com/?client=safari")
 }
 
 %%
@@ -13,7 +15,7 @@ function>> findDayofWeek(year, month, day){
 	monthKeys <- {1,4,4,0,2,5,0,3,6,1,4,6}
 	lastTwoofYear <- year % 100
 	oneQuarter <- lastTwoofYear / 4
-	m = month -1
+	m <- month -1
 	dayofWeek <- lastTwoofYear + oneQuarter + day + monthKeys[m]
 	if(year<1900){
 	dayofWeek <- dayofWeek + 2
