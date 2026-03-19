@@ -10,9 +10,6 @@ function>> celciusToFahrenheit(celcius){
 	return fahrenheit
 }
 
-function foo(){
-	<*this function declaration will give an syntax error*>
-}
 
 function>> fahrenheitToCelcius(fahrenheit){
 	celcius <- fahrenheit -32
