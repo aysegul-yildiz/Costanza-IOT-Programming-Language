@@ -32,7 +32,7 @@ run{
 
 		if(soundLevel > 15){
 			alarm <- 01100101 01111000 01100011 01010011 01101110 01100100 
-			<<sendInt (alarm to "https://www.google.com/?client=safari" )
+			
 		}
 
 	}
