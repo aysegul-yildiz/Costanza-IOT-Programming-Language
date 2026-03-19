@@ -22,7 +22,7 @@ run{
 	string1 <- "string test " 
 	string2 <- "another string test" 
 
-	string3 <- "test3"
+	string3 = "test3" <* this assignment operator will give an syntax error *>
  
 	int1 <- 1 + 1 
 	int2 <- 2 + 2 
